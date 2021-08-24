@@ -6,13 +6,13 @@ import pymongo
 from pymongo import MongoClient
 
 def pymongo():
-    cluster = MongoClient("mongodb+srv://RohitSingh:f8.ApphSJBi$KKs@cluster0.ufq4p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-    db = cluster["autoform"]
-    collection = db["entries"]
+    cluster = MongoClient("enter the connection string from mongodb which connects the python code to the mongodb collection ")
+    db = cluster["name of database"]
+    collection = db["name of collection"]
 # pymongo()
-cluster = MongoClient("mongodb+srv://RohitSingh:f8.ApphSJBi$KKs@cluster0.ufq4p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = cluster["autoform"]
-collection = db["entries"]
+cluster = MongoClient("enter the connection string from mongodb which connects the python code to the mongodb collection")
+db = cluster["name of database"]
+collection = db["name of collection"]
 
 
 import time
