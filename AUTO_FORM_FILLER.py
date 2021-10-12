@@ -5,6 +5,8 @@ from selenium.webdriver.chrome.options import Options
 import pymongo
 from pymongo import MongoClient
 
+
+#CONNECTING THE MONGODB WITH PYTHON, TO GET THE ANSWERS OF SIMILAR PREVIOUSLY ANSWERED QUESTIONS AUTOFILLED
 def pymongo():
     cluster = MongoClient("enter the connection string from mongodb which connects the python code to the mongodb collection ")
     db = cluster["name of database"]
@@ -22,6 +24,7 @@ import requests
 
 import pyautogui
 
+#CHANGING THE USER AGENT OF THE SELENIUM BOT, TO PREVENT ANY OBSTRUCTION
 opts = Options()
 user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15'
 opts.add_argument('user-agent=' + user_agent)
@@ -33,7 +36,7 @@ print('\n')
 link = input("PLEASE ENTER THE LINK OF THE FORM: ")
 
 source = requests.get(link).text
-soup = BeautifulSoup(source, 'lxml')
+soup = BeautifulSoup(source, 'lxml')#LXML IS THE HTML PARSER, REQUIRED FOR WEB SCRAPING
 
 title = soup.find('title').text
 print('Title of the form: ', title.upper())
